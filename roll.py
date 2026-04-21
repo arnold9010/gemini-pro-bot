@@ -1,15 +1,12 @@
 # roll.py
 
-# Твой обновленный список ключей
+# Твой свежий список ключей (вставлено 5 штук)
 API_KEYS = [
-    "AIzaSyC0yW6Df_-poJ4hY6U46tmCWaVLijOxKBY",
-    "AIzaSyDgTeuUXRW5PBwcPlbJvLGgYmgaHFCMLVM",
-    "AIzaSyDDde0I4Ll8MFiaTR6wusZsxin5khP-eNM",
-    "AIzaSyDes-0dhX_QcDiwbDsN429KeteGto-hSCU",
-    "AIzaSyCu15npLP2z42eudEeCmLwfUaEegyPtxPM",
-    "AIzaSyA_yDfcn8TsxEat966fqKE8g8007H_QCV4",
-    "AIzaSyCz7oPoU38Fwe5OceE33AElnRlkHzeH1jc",
-    "AIzaSyAd_5oTncxcATlVn_aKx3BEHJpIs7qwQTk"
+    "AIzaSyBt_MY6YQGYqPx1ZhnulWmiH9krF5mZFr8",
+    "AIzaSyBjg3Mk5Axj_odWRVpDvh0f5PDCYmNiFZ4",
+    "AIzaSyAF8Ltfk2AHQbcr5thHB5ofCPH6hvA3gXA",
+    "AIzaSyDh6M0V5JBw4_MbFx9smIu2KKOSpGhuUQA",
+    "AIzaSyCaIZkgTtg_grZAX-Yt1EuRUkr6NEwCVwY"
 ]
 
 _current_key_index = 0
@@ -19,7 +16,7 @@ def get_key():
     return API_KEYS[_current_key_index]
 
 def next_key():
-    """Переключает на следующий ключ в списке при ошибке (429 или лимит)."""
+    """Переключает на следующий ключ в списке при ошибке (429 или 403)."""
     global _current_key_index
     _current_key_index = (_current_key_index + 1) % len(API_KEYS)
     print(f"[*] Switched to API Key index: {_current_key_index}")
